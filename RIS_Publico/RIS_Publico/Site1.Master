@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#"  AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Web.Site1"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<style type="text/css">
+    .style1
+    {
+        height: 19px;
+    }
+</style>
+
+<form runat="server" id="form1"> 
+<head id="Head1" runat="server">
+ 
+  <link rel="stylesheet" type="text/css" href="App_Themes/default/style.css" />
+   <script type='text/javascript' src="<%= Page.ResolveUrl("js/jquery.min.js") %>"></script>
+   <script type="text/javascript"> 
+function checkKeyCode()
+{ 
+
+if(window.event && window.event.keyCode == 116)
+{ 
+    //alert ('Refresh deshabilitado');
+    event.keyCode=0;
+    return false;
+} 
+
+if( window.event.keyCode == 8) 
+{
+     //BackSpace lo cambia por tecla: <- 
+        
+     valor = document.activeElement.value; 
+//     alert(valor);
+    if (valor==undefined) 
+        event.keyCode=37;
+    
+}
+
+if(window.event && window.event.keyCode == 122) 
+{
+event.keyCode=0; 
+return false;
+}
+ //Controla combinaciÃ³n: Alt <- 
+if(window.event && window.event.keyCode == 37 ) 
+{ 
+     //alert ('Alt <- Deshabilitada ');
+    event.keyCode=0;
+    return false; 
+} 
+teclaAnt = window.event.keyCode ;
+} 
+       document.onkeydown=checkKeyCode;
+       
+if (document.all) {
+ window.moveTo(0,0);
+top.window.resizeTo(screen.availWidth,screen.availHeight);
+}
+else if (document.layers||document.getElementById) {
+if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth){
+top.window.outerHeight = screen.availHeight;
+top.window.outerWidth = screen.availWidth;
+}
+}
+         function  efecto(){
+       $('#cargando').hide();
+                             $('#contenidoWeb').fadeIn(500);                           
+        }     
+            
+        function Salir()
+        {
+        window.close();
+        }  
+        
+       function hoy()
+{
+   var fechaActual = new Date();
+ 
+    dia = fechaActual.getDate();
+    mes = fechaActual.getMonth() +1;
+    anno = fechaActual.getYear();
+    
+ 
+    if (dia <10) dia = "0" + dia;
+    if (mes <10) mes = "0" + mes;   
+ 
+    fechaHoy = dia + "/" + mes + "/" + anno;
+    
+    return fechaHoy;
+}
+   </script>   
+<asp:ContentPlaceHolder ID="head" runat="server">
+<title>PROSANE</title> 
+</asp:ContentPlaceHolder>
+</head>
+<body class="body" onload="efecto()"  > 	
+<form>
+<div id="menu" align="left">
+</div>      
+
+<div id="contenidoWeb" >    
+ <%--<div id="Div1"  style="display:none;">    --%><div><br />
+  <asp:ContentPlaceHolder ID="cuerpo" runat="server">                         
+
+
+
+  </asp:ContentPlaceHolder>
+</div>  
+  <br />
+<div id="footer">
+		<p>Subsecretaría de Salud de la Provincia de Neuquén - Dirección General de TICS - Versión 1.0</p>
+	</div>
+
+ </form>
+</body>	
+</html>

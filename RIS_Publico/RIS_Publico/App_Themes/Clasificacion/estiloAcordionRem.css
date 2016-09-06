@@ -1,0 +1,20 @@
+#options{width:705px; margin:5px auto; text-align:left; color:#9ac1c9}
+#options a{text-decoration:none; color:#9ac1c9}
+#options a:hover{color:#033}
+#acc{width:710px; list-style:none; color:#033; margin:0px auto 10px -10px; padding-left: 12px;}
+#acc h3{width: 696px;border: 1px solid #1f4e86;padding: 6px 6px 8px;font-weight: bold;margin-top: 5px;cursor: pointer;background: url(img/fd_menuu.gif) repeat-x;font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #1f4e86;}
+#acc h3:hover{background-color: #d3dfed;}
+#acc .acc-section{overflow:hidden;}
+#acc .acc-content{border-left: 1px solid #9ac1c9;border-right: 1px solid #9ac1c9;border-bottom: 1px solid #9ac1c9;width: 692px;padding: 8px;border-top: none;font-family: Arial, Helvetica, sans-serif;font-size: 12px;border-top-color: inherit;border-right-color: #225799;border-bottom-color: #225799;border-left-color: #225799;}
+#acc .acc-selected{ background-color: #1f4e86; color: #000000}
+#nested{width:685px; list-style:none; color:#033; margin-bottom:15px}
+#nested h3{width:671px; border:1px solid #256c32; padding:6px 6px 8px; font-weight:bold; margin-top:5px; cursor:pointer; background:url(../images/header.gif)}
+#nested h3:hover{background-color: #d3dfed; color: #000000}
+#nested .acc-section{overflow:hidden; background:#fff}
+#nested .acc-content{width: 653px; padding:15px; border:1px solid #256c32; border-top:none; background:#fff}
+#nested .acc-selected{ background-color: #1f4e86; color: #000000}
+#acc{width:710px; list-style:none; color:#033; margin:0px auto 10px -10px;}
+#acc h3{width: 696px;border: 1px solid #1f4e86;padding: 6px 6px 8px;font-weight: bold;margin-top: 5px;cursor: pointer;background: url(img/fd_menuu.gif) repeat-x;font-family: Arial, Helvetica, sans-serif;font-size: 12px;color: #1f4e86;}
+#acc h3:hover{background-color: #d3dfed; color: #000000}
+#acc .acc-section{overflow:hidden; margin-top: -12px;}
+#acc .acc-content{border-left: 1px solid #9ac1c9;border-right: 1px solid #9ac1c9;border-bottom: 1px solid #9ac1c9;width: 692px;padding: 8px;border-top: none;font-family: Arial, Helvetica, sans-serif;font-size: 12px;border-top-color: inherit;border-right-color: #225799;border-bottom-color: #225799;border-left-color: #225799;}

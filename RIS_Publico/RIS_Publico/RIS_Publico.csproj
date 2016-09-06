@@ -1,0 +1,1413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{165695A9-8BDD-4196-81AA-100E1F105829}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RIS_Publico</RootNamespace>
+    <AssemblyName>RIS_Publico</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DalRis">
+      <HintPath>..\..\DalRis\bin\Debug\DalRis.dll</HintPath>
+    </Reference>
+    <Reference Include="MagicAjax">
+      <HintPath>..\..\librerias\MagicAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\librerias\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Salud.Applications.Shared">
+      <HintPath>..\..\librerias\Salud.Applications.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Salud.Security.SSO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\librerias\Salud.Security.SSO.dll</HintPath>
+    </Reference>
+    <Reference Include="Salud.Security.SSO.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\librerias\Salud.Security.SSO.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic, Version=2.2.0.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\librerias\SubSonic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.7.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.20\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.4.5.6\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.0\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.0.0\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\apr\base.css" />
+    <Content Include="App_Themes\apr\custom.css" />
+    <Content Include="App_Themes\apr\loading.css" />
+    <Content Include="App_Themes\apr\template.css" />
+    <Content Include="App_Themes\apr\validationEngine.jquery.css" />
+    <Content Include="App_Themes\Clasificacion\estiloAcordionRem.css" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\altapac.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\busca.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\buscanoemp.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\buscanuevo.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\buscanuevoseguimiento.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\clasifica.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\clasifica1.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\clasificatodo.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\consultas.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\ediatseg1.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\ediatseg2.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\ediatseg3.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\ediatseg4.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\ediatsegtodo.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\empadron11.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\inicio.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\inicio1.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\login1.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\msnerror.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\nuevopaciente.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\pacenrem.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\pacensys.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\pacnoingr.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\pacver.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\remfin.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\remsum.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\verclasifica1.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\verclasifica2.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\verclasifica3.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\verseg1.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\verseg2.png" />
+    <Content Include="App_Themes\Clasificacion\imagesInstructivo\versegtodo.png" />
+    <Content Include="App_Themes\Clasificacion\images\alerta.png" />
+    <Content Include="App_Themes\Clasificacion\images\arrows-ffffff.png" />
+    <Content Include="App_Themes\Clasificacion\images\ayuda.png" />
+    <Content Include="App_Themes\Clasificacion\images\body_bg.jpg" />
+    <Content Include="App_Themes\Clasificacion\images\body_bgcla.jpg" />
+    <Content Include="App_Themes\Clasificacion\images\boton-buscar.gif" />
+    <Content Include="App_Themes\Clasificacion\images\boton_buscar.png" />
+    <Content Include="App_Themes\Clasificacion\images\boton_buscar1.gif" />
+    <Content Include="App_Themes\Clasificacion\images\boton_exp.png" />
+    <Content Include="App_Themes\Clasificacion\images\btn_buscar.gif" />
+    <Content Include="App_Themes\Clasificacion\images\editar.png" />
+    <Content Include="App_Themes\Clasificacion\images\exell2.png" />
+    <Content Include="App_Themes\Clasificacion\images\expie.png" />
+    <Content Include="App_Themes\Clasificacion\images\fondo_menu_desplegable.png" />
+    <Content Include="App_Themes\Clasificacion\images\hclinica.png" />
+    <Content Include="App_Themes\Clasificacion\images\header_home.jpg" />
+    <Content Include="App_Themes\Clasificacion\images\help.png" />
+    <Content Include="App_Themes\Clasificacion\images\home.png" />
+    <Content Include="App_Themes\Clasificacion\images\inicio.png" />
+    <Content Include="App_Themes\Clasificacion\images\logo.png" />
+    <Content Include="App_Themes\Clasificacion\images\logout.png" />
+    <Content Include="App_Themes\Clasificacion\images\logout2.png" />
+    <Content Include="App_Themes\Clasificacion\images\Piee.png" />
+    <Content Include="App_Themes\Clasificacion\images\pprint.png" />
+    <Content Include="App_Themes\Clasificacion\images\salir.png" />
+    <Content Include="App_Themes\Clasificacion\images\shadow.png" />
+    <Content Include="App_Themes\Clasificacion\images\sub.png" />
+    <Content Include="App_Themes\Clasificacion\images\sub1.png" />
+    <Content Include="App_Themes\Clasificacion\images\tabla.png" />
+    <Content Include="App_Themes\Clasificacion\images\tabla2.png" />
+    <Content Include="App_Themes\Clasificacion\images\unidades.png" />
+    <Content Include="App_Themes\Clasificacion\images\ver.png" />
+    <Content Include="App_Themes\Clasificacion\jquery-ui-1.8rc3.custom.css" />
+    <Content Include="App_Themes\Clasificacion\Menu.css" />
+    <Content Include="App_Themes\Clasificacion\style.css" />
+    <Content Include="App_Themes\consultorio\Agenda\1p.gif" />
+    <Content Include="App_Themes\consultorio\Agenda\acroread-icono-4237-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\acroread-icono-4237-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\acroread-icono-4237-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\actualiza-icono-8461-128.png" />
+    <Content Include="App_Themes\consultorio\Agenda\actualiza-icono-8461-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\actualiza-icono-8461-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\actualiza-icono-8461-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\actualiza-icono-8461-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\actualiza-icono-8461-96.png" />
+    <Content Include="App_Themes\consultorio\Agenda\agenda.png" />
+    <Content Include="App_Themes\consultorio\Agenda\Agenda2.png" />
+    <Content Include="App_Themes\consultorio\Agenda\agenda32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\alerta.png" />
+    <Content Include="App_Themes\consultorio\Agenda\alerta1.png" />
+    <Content Include="App_Themes\consultorio\Agenda\alerta32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\alt-vaciar-la-papelera-icono-6427-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\alt-vaciar-la-papelera-icono-6427-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\alt-vaciar-la-papelera-icono-6427-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\anadir-mas-verde-icono-5682-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\anadir-mas-verde-icono-5682-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\anadir-mas-verde-icono-5682-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\anadir-mas-verde-icono-5682-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\arriba-icono-6805-128.png" />
+    <Content Include="App_Themes\consultorio\Agenda\arriba-icono-6805-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\arriba-icono-6805-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\avatar.png" />
+    <Content Include="App_Themes\consultorio\Agenda\avatar2.png" />
+    <Content Include="App_Themes\consultorio\Agenda\ayuda32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\ayuda48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\ayuda64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\bntLargo.png" />
+    <Content Include="App_Themes\consultorio\Agenda\boton-de-error-icono-5371-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\boton-de-error-icono-5371-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\boton-de-error-icono-5371-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\boton-de-error-icono-5371-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\btnEditar.png" />
+    <Content Include="App_Themes\consultorio\Agenda\btnHistorial.png" />
+    <Content Include="App_Themes\consultorio\Agenda\btnSel.png" />
+    <Content Include="App_Themes\consultorio\Agenda\buscar.png" />
+    <Content Include="App_Themes\consultorio\Agenda\buscar2.png" />
+    <Content Include="App_Themes\consultorio\Agenda\calendar.jpg" />
+    <Content Include="App_Themes\consultorio\Agenda\calendar16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\calendario.png" />
+    <Content Include="App_Themes\consultorio\Agenda\cancelar.png" />
+    <Content Include="App_Themes\consultorio\Agenda\candado32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\casa.png" />
+    <Content Include="App_Themes\consultorio\Agenda\cerrar-icono-3898-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\cerrar-icono-3898-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\cerrar-icono-3898-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\cesta-llena-alt-icono-4368-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\cesta-llena-alt-icono-4368-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\cesta-llena-alt-icono-4368-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\check_rojopng.png" />
+    <Content Include="App_Themes\consultorio\Agenda\check_verde.png" />
+    <Content Include="App_Themes\consultorio\Agenda\check_verde16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\construir-icono-7445-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\construir-icono-7445-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\contramano32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\copia-de-seguridad-de-disco-icono-5770-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\copia-de-seguridad-de-disco-icono-5770-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\copia-de-seguridad-de-disco-icono-5770-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\corners-type.gif" />
+    <Content Include="App_Themes\consultorio\Agenda\cubo.png" />
+    <Content Include="App_Themes\consultorio\Agenda\de-alerta-de-mensaje-icono-8710-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\de-alerta-de-mensaje-icono-8710-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\de-alerta-de-mensaje-icono-8710-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\desbloquear-icono-4580-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\desbloquear-icono-4580-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\desconexion-de-salida-icono-7025-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\duplicar.png" />
+    <Content Include="App_Themes\consultorio\Agenda\editar-el-archivo-de-papel-pluma-icono-3744-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\editar-el-archivo-de-papel-pluma-icono-3744-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\editar-el-archivo-de-papel-pluma-icono-3744-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\editar-el-texto-icono-3973-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\editar-el-texto-icono-3973-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\editar-el-texto-icono-3973-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\editar-el-texto-icono-3973-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\editar-icono-8221-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\editar-icono-8221-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\eliminar.png" />
+    <Content Include="App_Themes\consultorio\Agenda\eliminardisabled.png" />
+    <Content Include="App_Themes\consultorio\Agenda\encontrar-busqueda-zoom-icono-6513-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\encontrar-busqueda-zoom-icono-6513-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\encontrar-busqueda-zoom-icono-6513-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\encontrar-busqueda-zoom-icono-6513-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\engranaje.png" />
+    <Content Include="App_Themes\consultorio\Agenda\fecha-del-calendario-en-enero-de-icono-5659-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\fecha-del-calendario-en-enero-de-icono-5659-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\fecha-del-calendario-en-enero-de-icono-5659-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\flechanaranja.png" />
+    <Content Include="App_Themes\consultorio\Agenda\flechaplateada.png" />
+    <Content Include="App_Themes\consultorio\Agenda\flechas-interactuar-actualizacion-de-recarga-icono-9039-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\flechas-interactuar-actualizacion-de-recarga-icono-9039-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\flechas-interactuar-actualizacion-de-recarga-icono-9039-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\flechas-interactuar-actualizacion-de-recarga-icono-9039-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\flechaverde.png" />
+    <Content Include="App_Themes\consultorio\Agenda\fondo-menu-iz-cont.gif" />
+    <Content Include="App_Themes\consultorio\Agenda\grabar.png" />
+    <Content Include="App_Themes\consultorio\Agenda\grabarCd.png" />
+    <Content Include="App_Themes\consultorio\Agenda\grupo.png" />
+    <Content Include="App_Themes\consultorio\Agenda\hombre16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\hombre32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\hombre48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\hora.gif" />
+    <Content Include="App_Themes\consultorio\Agenda\hora.png" />
+    <Content Include="App_Themes\consultorio\Agenda\informacion-de-mensaje-de-alerta-icono-4460-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\informacion-de-mensaje-de-alerta-icono-4460-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\informacion-de-mensaje-de-alerta-icono-4460-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\jornada_fecha.gif" />
+    <Content Include="App_Themes\consultorio\Agenda\jornada_inscrip.gif" />
+    <Content Include="App_Themes\consultorio\Agenda\kcontrol-icono-9772-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\kcontrol-icono-9772-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\kcontrol-icono-9772-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\kdmconfig-icono-5085-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\kdmconfig-icono-5085-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\kdmconfig-icono-5085-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\kontact-fecha-icono-9647-128.png" />
+    <Content Include="App_Themes\consultorio\Agenda\kontact-fecha-icono-9647-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\kontact-fecha-icono-9647-96.png" />
+    <Content Include="App_Themes\consultorio\Agenda\LargaVista.png" />
+    <Content Include="App_Themes\consultorio\Agenda\mas.png" />
+    <Content Include="App_Themes\consultorio\Agenda\menos.png" />
+    <Content Include="App_Themes\consultorio\Agenda\messagebox-criticas-icono-5654-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\messagebox-criticas-icono-5654-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\messagebox-criticas-icono-5654-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\mujer32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\mujer48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\mujer64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\mujer96.png" />
+    <Content Include="App_Themes\consultorio\Agenda\oficina-icono-9743-128.png" />
+    <Content Include="App_Themes\consultorio\Agenda\oficina-icono-9743-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\oficina-icono-9743-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\oficina-icono-9743-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\oficina-icono-9743-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\oficina-icono-9743-96.png" />
+    <Content Include="App_Themes\consultorio\Agenda\peronanaranja.png" />
+    <Content Include="App_Themes\consultorio\Agenda\personacorazon.png" />
+    <Content Include="App_Themes\consultorio\Agenda\personaverde.png" />
+    <Content Include="App_Themes\consultorio\Agenda\reiniciar.png" />
+    <Content Include="App_Themes\consultorio\Agenda\rew-jugador-icono-5089-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\rew-jugador-icono-5089-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\rew-jugador-icono-5089-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\seleccionar.png" />
+    <Content Include="App_Themes\consultorio\Agenda\subir.png" />
+    <Content Include="App_Themes\consultorio\Agenda\suprime-la-ventana-icono-4582-16.png" />
+    <Content Include="App_Themes\consultorio\Agenda\suprime-la-ventana-icono-4582-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\suprime-la-ventana-icono-4582-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\tilde_verde.gif" />
+    <Content Include="App_Themes\consultorio\Agenda\tipoevento.gif" />
+    <Content Include="App_Themes\consultorio\Agenda\transparente.jpg" />
+    <Content Include="App_Themes\consultorio\Agenda\tu-lector-icono-5536-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\tu-lector-icono-5536-48.png" />
+    <Content Include="App_Themes\consultorio\Agenda\tu-lector-icono-5536-64.png" />
+    <Content Include="App_Themes\consultorio\Agenda\turnoactivo.png" />
+    <Content Include="App_Themes\consultorio\Agenda\turnobloqueado.png" />
+    <Content Include="App_Themes\consultorio\Agenda\turnoeliminado.png" />
+    <Content Include="App_Themes\consultorio\Agenda\turnoocupado.png" />
+    <Content Include="App_Themes\consultorio\Agenda\turnorecitado.png" />
+    <Content Include="App_Themes\consultorio\Agenda\turnoreservado.png" />
+    <Content Include="App_Themes\consultorio\Agenda\ventana-de-la-carpeta-icono-8526-128.png" />
+    <Content Include="App_Themes\consultorio\Agenda\ventana-de-la-carpeta-icono-8526-32.png" />
+    <Content Include="App_Themes\consultorio\Agenda\ventana-de-la-carpeta-icono-8526-48.png" />
+    <Content Include="App_Themes\consultorio\cal-sprite64.png" />
+    <Content Include="App_Themes\consultorio\calendar-es.js" />
+    <Content Include="App_Themes\consultorio\calendar-green.css" />
+    <Content Include="App_Themes\consultorio\calendar-setup.js" />
+    <Content Include="App_Themes\consultorio\calendar.js" />
+    <Content Include="App_Themes\consultorio\ical.css" />
+    <Content Include="App_Themes\consultorio\images\14.png" />
+    <Content Include="App_Themes\consultorio\images\amarillo.gif" />
+    <Content Include="App_Themes\consultorio\images\arrow-down.gif" />
+    <Content Include="App_Themes\consultorio\images\arrow-up.gif" />
+    <Content Include="App_Themes\consultorio\images\añadir.jpg" />
+    <Content Include="App_Themes\consultorio\images\bg.jpg" />
+    <Content Include="App_Themes\consultorio\images\block.png" />
+    <Content Include="App_Themes\consultorio\images\buscar.jpg" />
+    <Content Include="App_Themes\consultorio\images\calend1.jpg" />
+    <Content Include="App_Themes\consultorio\images\CUADRO.jpg" />
+    <Content Include="App_Themes\consultorio\images\diagrama.jpg" />
+    <Content Include="App_Themes\consultorio\images\dos.jpg" />
+    <Content Include="App_Themes\consultorio\images\editar.jpg" />
+    <Content Include="App_Themes\consultorio\images\eliminar.jpg" />
+    <Content Include="App_Themes\consultorio\images\enviado.png" />
+    <Content Include="App_Themes\consultorio\images\estadistica.jpg" />
+    <Content Include="App_Themes\consultorio\images\excell3.png" />
+    <Content Include="App_Themes\consultorio\images\excelPeq.gif" />
+    <Content Include="App_Themes\consultorio\images\Exit.png" />
+    <Content Include="App_Themes\consultorio\images\favicon.ico" />
+    <Content Include="App_Themes\consultorio\images\flecha.jpg" />
+    <Content Include="App_Themes\consultorio\images\flecha1.jpg" />
+    <Content Include="App_Themes\consultorio\images\flecha2.jpg" />
+    <Content Include="App_Themes\consultorio\images\header.jpg" />
+    <Content Include="App_Themes\consultorio\images\HL7logo.gif" />
+    <Content Include="App_Themes\consultorio\images\icono_ayuda.gif" />
+    <Content Include="App_Themes\consultorio\images\icono_contacto.gif" />
+    <Content Include="App_Themes\consultorio\images\icono_help.jpg" />
+    <Content Include="App_Themes\consultorio\images\icono_homeGratis.gif" />
+    <Content Include="App_Themes\consultorio\images\icon_close.gif" />
+    <Content Include="App_Themes\consultorio\images\impreso.jpg" />
+    <Content Include="App_Themes\consultorio\images\imprimir.jpg" />
+    <Content Include="App_Themes\consultorio\images\indicador.gif" />
+    <Content Include="App_Themes\consultorio\images\information.png" />
+    <Content Include="App_Themes\consultorio\images\Internet-explorer.png" />
+    <Content Include="App_Themes\consultorio\images\lista.jpg" />
+    <Content Include="App_Themes\consultorio\images\Logo Blanco.png" />
+    <Content Include="App_Themes\consultorio\images\Logo Verde.png" />
+    <Content Include="App_Themes\consultorio\images\medico.jpg" />
+    <Content Include="App_Themes\consultorio\images\new.png" />
+    <Content Include="App_Themes\consultorio\images\noDisponible.gif" />
+    <Content Include="App_Themes\consultorio\images\Nuevo logo.jpg" />
+    <Content Include="App_Themes\consultorio\images\pdf.jpg" />
+    <Content Include="App_Themes\consultorio\images\pendiente.png" />
+    <Content Include="App_Themes\consultorio\images\rojo.gif" />
+    <Content Include="App_Themes\consultorio\images\rojo.png" />
+    <Content Include="App_Themes\consultorio\images\sacar.jpg" />
+    <Content Include="App_Themes\consultorio\images\sysmessage.png" />
+    <Content Include="App_Themes\consultorio\images\transparente.jpg" />
+    <Content Include="App_Themes\consultorio\images\tres.jpg" />
+    <Content Include="App_Themes\consultorio\images\uno.jpg" />
+    <Content Include="App_Themes\consultorio\images\valorefe.jpg" />
+    <Content Include="App_Themes\consultorio\images\verde.gif" />
+    <Content Include="App_Themes\consultorio\images\zoom.png" />
+    <Content Include="App_Themes\consultorio\menu\arrow.gif" />
+    <Content Include="App_Themes\consultorio\menu\arrow_over.gif" />
+    <Content Include="App_Themes\consultorio\menu\blank.gif" />
+    <Content Include="App_Themes\consultorio\menu\blanka.gif" />
+    <Content Include="App_Themes\consultorio\menu\blank_over.gif" />
+    <Content Include="App_Themes\consultorio\menu\blank_overa.gif" />
+    <Content Include="App_Themes\consultorio\menu\lineavertical.gif" />
+    <Content Include="App_Themes\consultorio\menu\menu.css" />
+    <Content Include="App_Themes\consultorio\menu\pro_drop_1.css" />
+    <Content Include="App_Themes\consultorio\menu\stuHover.js" />
+    <Content Include="App_Themes\consultorio\principal\images\bar_chart_add.png" />
+    <Content Include="App_Themes\consultorio\principal\images\Calendar.png" />
+    <Content Include="App_Themes\consultorio\principal\images\center_bg.gif" />
+    <Content Include="App_Themes\consultorio\principal\images\clear.gif" />
+    <Content Include="App_Themes\consultorio\principal\images\DutyRoster.png" />
+    <Content Include="App_Themes\consultorio\principal\images\estadistica3.jpg" />
+    <Content Include="App_Themes\consultorio\principal\images\footer_list_bullet.gif" />
+    <Content Include="App_Themes\consultorio\principal\images\menu_bullet.gif" />
+    <Content Include="App_Themes\consultorio\principal\images\PatientFile.png" />
+    <Content Include="App_Themes\consultorio\principal\images\PrinterSettings.png" />
+    <Content Include="App_Themes\consultorio\principal\images\resultados.png" />
+    <Content Include="App_Themes\consultorio\principal\images\TestTubes.png" />
+    <Content Include="App_Themes\consultorio\principal\images\tilde_verde.gif" />
+    <Content Include="App_Themes\consultorio\principal\images\urgencia.png" />
+    <Content Include="App_Themes\consultorio\principal\images\validacion2.png" />
+    <Content Include="App_Themes\consultorio\principal\style.css" />
+    <Content Include="App_Themes\consultorio\style.css" />
+    <Content Include="App_Themes\default\estilo.css" />
+    <Content Include="App_Themes\default\estilo2.css" />
+    <Content Include="App_Themes\default\estiloAcordion.css" />
+    <Content Include="App_Themes\default\img\agregar.png" />
+    <Content Include="App_Themes\default\img\button4a.gif" />
+    <Content Include="App_Themes\default\img\calendar.gif" />
+    <Content Include="App_Themes\default\img\calendar.png" />
+    <Content Include="App_Themes\default\img\card.png" />
+    <Content Include="App_Themes\default\img\check.png" />
+    <Content Include="App_Themes\default\img\checkbox.gif" />
+    <Content Include="App_Themes\default\img\checkVerde.png" />
+    <Content Include="App_Themes\default\img\edit.png" />
+    <Content Include="App_Themes\default\img\editar.png" />
+    <Content Include="App_Themes\default\img\estadi.png" />
+    <Content Include="App_Themes\default\img\fd_menu.gif" />
+    <Content Include="App_Themes\default\img\fd_menuu.gif" />
+    <Content Include="App_Themes\default\img\fondocuadros.gif" />
+    <Content Include="App_Themes\default\img\help.png" />
+    <Content Include="App_Themes\default\img\imagenEnBlanco.png" />
+    <Content Include="App_Themes\default\img\img1.png" />
+    <Content Include="App_Themes\default\img\img11.png" />
+    <Content Include="App_Themes\default\img\img2.png" />
+    <Content Include="App_Themes\default\img\img22.png" />
+    <Content Include="App_Themes\default\img\img3.png" />
+    <Content Include="App_Themes\default\img\img33.png" />
+    <Content Include="App_Themes\default\img\img4.png" />
+    <Content Include="App_Themes\default\img\img44.png" />
+    <Content Include="App_Themes\default\img\logg.png" />
+    <Content Include="App_Themes\default\img\logssn.gif" />
+    <Content Include="App_Themes\default\img\menu_der.gif" />
+    <Content Include="App_Themes\default\img\menu_izq.gif" />
+    <Content Include="App_Themes\default\img\print.png" />
+    <Content Include="App_Themes\default\img\radio.gif" />
+    <Content Include="App_Themes\default\img\ref.png" />
+    <Content Include="App_Themes\default\img\salir.png" />
+    <Content Include="App_Themes\default\img\usr.png" />
+    <Content Include="App_Themes\default\img\vinet.png" />
+    <Content Include="App_Themes\default\img\vineta_men.gif" />
+    <Content Include="App_Themes\default\img\vineta_menu.gif" />
+    <Content Include="App_Themes\default\menu.css" />
+    <Content Include="App_Themes\Hidatidosis\default\calendar-es.js" />
+    <Content Include="App_Themes\Hidatidosis\default\calendar-green.css" />
+    <Content Include="App_Themes\Hidatidosis\default\calendar-setup.js" />
+    <Content Include="App_Themes\Hidatidosis\default\calendar.js" />
+    <Content Include="App_Themes\Hidatidosis\default\images\alerta.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\alerta_.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\block.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\buscar.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\calend1.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\CUADRO.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\editar.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\eliminar.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\enviado.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\estadistica.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\estadoAnormal.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\estadoEnviada.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\estadoNormal.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\estadoPendiente.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\estadoRechazada.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\estadoRecibida.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\excell3.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\excelPeq.gif" />
+    <Content Include="App_Themes\Hidatidosis\default\images\Exit.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\favicon.ico" />
+    <Content Include="App_Themes\Hidatidosis\default\images\flecha.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\fondoRayaGris.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\icono_ayuda.gif" />
+    <Content Include="App_Themes\Hidatidosis\default\images\icono_contacto.gif" />
+    <Content Include="App_Themes\Hidatidosis\default\images\icono_help.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\icono_homeGratis.gif" />
+    <Content Include="App_Themes\Hidatidosis\default\images\icon_close.gif" />
+    <Content Include="App_Themes\Hidatidosis\default\images\impreso.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\imprimir.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\information.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\Internet-explorer.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\lista.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\Logo Blanco.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\Logo Verde.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\medico.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\motivoRechazo.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\new.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\noDisponible.gif" />
+    <Content Include="App_Themes\Hidatidosis\default\images\pdf.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\pendiente.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\process.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\quitar.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\sacar.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\sysmessage.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\transparente.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\images\user.png" />
+    <Content Include="App_Themes\Hidatidosis\default\images\warning.png" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\bar_chart_add.png" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\Calendar.png" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\center_bg.gif" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\clear.gif" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\DutyRoster.png" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\estadistica3.jpg" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\footer_list_bullet.gif" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\menu_bullet.gif" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\PatientFile.png" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\PrinterSettings.png" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\resultados.png" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\TestTubes.png" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\tilde_verde.gif" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\urgencia.png" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\images\validacion2.png" />
+    <Content Include="App_Themes\Hidatidosis\default\principal\style.css" />
+    <Content Include="App_Themes\Hidatidosis\default\style.css" />
+    <Content Include="App_Themes\Hidatidosis\Login\css\fisheye-menu.css" />
+    <Content Include="App_Themes\Hidatidosis\Login\css\menu.css" />
+    <Content Include="App_Themes\Hidatidosis\Login\css\style.css" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\ayuda.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\ayuda1.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\bluec_l.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\bluec_r.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\bullet_add.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\edit.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\edit1.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\footer.jpg" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\greyc.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\head.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\help.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\help2.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\home.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\home.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\home2.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\images %281%29.jpg" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\images.jpg" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\inicio.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\logo.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\logo1.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\logo2.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\menu.jpg" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\menul.jpg" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\menur.jpg" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\pass.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\pass.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\pass2.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\sal.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\sal2.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\salir.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\salir.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\sep.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\sub.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\subse.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\top.jpg" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\topl.jpg" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\topr.jpg" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\ver.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\ver1.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\images\ver2.png" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\agenda.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\agenda1.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\agenda1_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\agenda_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\configuracion.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\configuracion_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\Consultas.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\Consultas_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\Consultorio.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\Consultorio_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\ctrolEmbarazo.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\ctrolEmbarazo_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\ctrolMenor.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\ctrolMenor_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\empad.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\empadronamiento.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\empadronamiento_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\empad_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\lab.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\lab_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\paciente.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\paciente_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\pcmenor.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\pcontrol.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\pcontrol_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\pcperinatal.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\recupero.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\recuperobis.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\recuperobis_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\recupero_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\registroconsulta.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\registroconsulta_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\remediar.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\remediar_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\RGCV.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\RGCV_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\turnos %282%29.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\turnos.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\turnos1.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\turnos1_small.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\turnos_small %282%29.gif" />
+    <Content Include="App_Themes\Hidatidosis\Login\img\turnos_small.gif" />
+    <Content Include="App_Themes\interconsultas\images\agregarDestinatario.png" />
+    <Content Include="App_Themes\interconsultas\images\agregarDialogo.png" />
+    <Content Include="App_Themes\interconsultas\images\agregarInterconsulta.png" />
+    <Content Include="App_Themes\interconsultas\images\agregarPaciente.png" />
+    <Content Include="App_Themes\interconsultas\images\altaRegistro.png" />
+    <Content Include="App_Themes\interconsultas\images\buscar.png" />
+    <Content Include="App_Themes\interconsultas\images\cerrar.png" />
+    <Content Include="App_Themes\interconsultas\images\consultaRegistro.png" />
+    <Content Include="App_Themes\interconsultas\images\continuar.png" />
+    <Content Include="App_Themes\interconsultas\images\delete.png" />
+    <Content Include="App_Themes\interconsultas\images\enviar.png" />
+    <Content Include="App_Themes\interconsultas\images\guardar.png" />
+    <Content Include="App_Themes\interconsultas\images\help.png" />
+    <Content Include="App_Themes\interconsultas\images\OLD_agregarInterconsulta.png" />
+    <Content Include="App_Themes\interconsultas\images\paciente.png" />
+    <Content Include="App_Themes\interconsultas\images\recargarPagina.png" />
+    <Content Include="App_Themes\interconsultas\images\reporte.png" />
+    <Content Include="App_Themes\interconsultas\images\seleccionar.png" />
+    <Content Include="App_Themes\interconsultas\images\subirArchivoAdjunto.png" />
+    <Content Include="App_Themes\interconsultas\images\verDatos.png" />
+    <Content Include="App_Themes\interconsultas\images\volver.png" />
+    <Content Include="App_Themes\Laboratorio\default\calendar-es.js" />
+    <Content Include="App_Themes\Laboratorio\default\calendar-green.css" />
+    <Content Include="App_Themes\Laboratorio\default\calendar-setup.js" />
+    <Content Include="App_Themes\Laboratorio\default\calendar.js" />
+    <Content Include="App_Themes\Laboratorio\default\images\alerta.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\alerta_.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\block.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\botonBuscar.gif" />
+    <Content Include="App_Themes\Laboratorio\default\images\buscar.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\calend1.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\CUADRO.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\editar.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\eliminar.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\enviado.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\estadistica.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\estadoAnormal.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\estadoEnviada.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\estadoNormal.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\estadoPendiente.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\estadoRechazada.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\estadoRecibida.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\excell3.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\excelPeq.gif" />
+    <Content Include="App_Themes\Laboratorio\default\images\Exit.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\favicon.ico" />
+    <Content Include="App_Themes\Laboratorio\default\images\flecha.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\icono_ayuda.gif" />
+    <Content Include="App_Themes\Laboratorio\default\images\icono_contacto.gif" />
+    <Content Include="App_Themes\Laboratorio\default\images\icono_help.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\icono_homeGratis.gif" />
+    <Content Include="App_Themes\Laboratorio\default\images\icon_close.gif" />
+    <Content Include="App_Themes\Laboratorio\default\images\impreso.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\imprimir.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\information.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\Internet-explorer.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\lista.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\Logo Blanco.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\Logo Verde.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\medico.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\motivoRechazo.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\new.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\noDisponible.gif" />
+    <Content Include="App_Themes\Laboratorio\default\images\pdf.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\pendiente.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\process.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\sacar.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\sysmessage.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\transparente.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\images\user.png" />
+    <Content Include="App_Themes\Laboratorio\default\images\warning.png" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\bar_chart_add.png" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\Calendar.png" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\center_bg.gif" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\clear.gif" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\DutyRoster.png" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\estadistica3.jpg" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\footer_list_bullet.gif" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\menu_bullet.gif" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\PatientFile.png" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\PrinterSettings.png" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\resultados.png" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\TestTubes.png" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\tilde_verde.gif" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\urgencia.png" />
+    <Content Include="App_Themes\Laboratorio\default\principal\images\validacion2.png" />
+    <Content Include="App_Themes\Laboratorio\default\principal\style.css" />
+    <Content Include="App_Themes\Laboratorio\default\style.css" />
+    <Content Include="App_Themes\Laboratorio\Login\css\fisheye-menu.css" />
+    <Content Include="App_Themes\Laboratorio\Login\css\menu.css" />
+    <Content Include="App_Themes\Laboratorio\Login\css\style.css" />
+    <Content Include="App_Themes\Laboratorio\Login\images\ayuda.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\ayuda1.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\bluec_l.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\bluec_r.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\bullet_add.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\edit.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\edit1.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\footer.jpg" />
+    <Content Include="App_Themes\Laboratorio\Login\images\greyc.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\head.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\help.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\help2.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\home.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\home.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\home2.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\images %281%29.jpg" />
+    <Content Include="App_Themes\Laboratorio\Login\images\images.jpg" />
+    <Content Include="App_Themes\Laboratorio\Login\images\inicio.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\logo.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\logo1.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\logo2.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\menu.jpg" />
+    <Content Include="App_Themes\Laboratorio\Login\images\menul.jpg" />
+    <Content Include="App_Themes\Laboratorio\Login\images\menur.jpg" />
+    <Content Include="App_Themes\Laboratorio\Login\images\pass.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\pass.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\pass2.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\sal.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\sal2.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\salir.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\salir.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\sep.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\images\sub.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\subse.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\top.jpg" />
+    <Content Include="App_Themes\Laboratorio\Login\images\topl.jpg" />
+    <Content Include="App_Themes\Laboratorio\Login\images\topr.jpg" />
+    <Content Include="App_Themes\Laboratorio\Login\images\ver.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\ver1.png" />
+    <Content Include="App_Themes\Laboratorio\Login\images\ver2.png" />
+    <Content Include="App_Themes\Laboratorio\Login\img\agenda.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\agenda1.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\agenda1_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\agenda_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\configuracion.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\configuracion_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\Consultas.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\Consultas_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\Consultorio.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\Consultorio_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\ctrolEmbarazo.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\ctrolEmbarazo_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\ctrolMenor.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\ctrolMenor_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\empad.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\empadronamiento.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\empadronamiento_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\empad_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\lab.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\lab_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\paciente.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\paciente_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\pcmenor.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\pcontrol.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\pcontrol_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\pcperinatal.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\recupero.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\recuperobis.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\recuperobis_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\recupero_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\registroconsulta.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\registroconsulta_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\remediar.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\remediar_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\RGCV.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\RGCV_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\turnos %282%29.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\turnos.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\turnos1.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\turnos1_small.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\turnos_small %282%29.gif" />
+    <Content Include="App_Themes\Laboratorio\Login\img\turnos_small.gif" />
+    <Content Include="App_Themes\Login\css\fisheye-menu.css" />
+    <Content Include="App_Themes\Login\css\menu.css" />
+    <Content Include="App_Themes\Login\css\style.css" />
+    <Content Include="App_Themes\Login\images\ayuda.png" />
+    <Content Include="App_Themes\Login\images\ayuda1.gif" />
+    <Content Include="App_Themes\Login\images\bluec_l.gif" />
+    <Content Include="App_Themes\Login\images\bluec_r.gif" />
+    <Content Include="App_Themes\Login\images\edit.png" />
+    <Content Include="App_Themes\Login\images\edit1.png" />
+    <Content Include="App_Themes\Login\images\footer.jpg" />
+    <Content Include="App_Themes\Login\images\greyc.gif" />
+    <Content Include="App_Themes\Login\images\head.gif" />
+    <Content Include="App_Themes\Login\images\help.png" />
+    <Content Include="App_Themes\Login\images\help2.gif" />
+    <Content Include="App_Themes\Login\images\home.gif" />
+    <Content Include="App_Themes\Login\images\home.png" />
+    <Content Include="App_Themes\Login\images\home2.gif" />
+    <Content Include="App_Themes\Login\images\images %281%29.jpg" />
+    <Content Include="App_Themes\Login\images\images.jpg" />
+    <Content Include="App_Themes\Login\images\inicio.png" />
+    <Content Include="App_Themes\Login\images\logo.gif" />
+    <Content Include="App_Themes\Login\images\logo1.gif" />
+    <Content Include="App_Themes\Login\images\logo2.gif" />
+    <Content Include="App_Themes\Login\images\menu.jpg" />
+    <Content Include="App_Themes\Login\images\menul.jpg" />
+    <Content Include="App_Themes\Login\images\menur.jpg" />
+    <Content Include="App_Themes\Login\images\os.png" />
+    <Content Include="App_Themes\Login\images\pass.gif" />
+    <Content Include="App_Themes\Login\images\pass.png" />
+    <Content Include="App_Themes\Login\images\pass2.gif" />
+    <Content Include="App_Themes\Login\images\sal.png" />
+    <Content Include="App_Themes\Login\images\sal2.gif" />
+    <Content Include="App_Themes\Login\images\salir.gif" />
+    <Content Include="App_Themes\Login\images\salir.png" />
+    <Content Include="App_Themes\Login\images\sep.gif" />
+    <Content Include="App_Themes\Login\images\sub.png" />
+    <Content Include="App_Themes\Login\images\subse.png" />
+    <Content Include="App_Themes\Login\images\top.jpg" />
+    <Content Include="App_Themes\Login\images\topl.jpg" />
+    <Content Include="App_Themes\Login\images\topr.jpg" />
+    <Content Include="App_Themes\Login\images\ver.png" />
+    <Content Include="App_Themes\Login\images\ver1.png" />
+    <Content Include="App_Themes\Login\images\ver2.png" />
+    <Content Include="App_Themes\Login\img\actividadfisica.gif" />
+    <Content Include="App_Themes\Login\img\actividadfisica_small.gif" />
+    <Content Include="App_Themes\Login\img\agenda.gif" />
+    <Content Include="App_Themes\Login\img\agenda1.gif" />
+    <Content Include="App_Themes\Login\img\agenda1_small.gif" />
+    <Content Include="App_Themes\Login\img\agenda_small.gif" />
+    <Content Include="App_Themes\Login\img\Automotores.gif" />
+    <Content Include="App_Themes\Login\img\Automotores_small.gif" />
+    <Content Include="App_Themes\Login\img\configuracion.gif" />
+    <Content Include="App_Themes\Login\img\configuracion_small.gif" />
+    <Content Include="App_Themes\Login\img\Consultas.gif" />
+    <Content Include="App_Themes\Login\img\Consultas_small.gif" />
+    <Content Include="App_Themes\Login\img\Consultorio.gif" />
+    <Content Include="App_Themes\Login\img\Consultorio_small.gif" />
+    <Content Include="App_Themes\Login\img\CTab.gif" />
+    <Content Include="App_Themes\Login\img\CTab_small.gif" />
+    <Content Include="App_Themes\Login\img\ctrolEmbarazo.gif" />
+    <Content Include="App_Themes\Login\img\ctrolEmbarazo_small.gif" />
+    <Content Include="App_Themes\Login\img\ctrolMenor.gif" />
+    <Content Include="App_Themes\Login\img\ctrolMenor_small.gif" />
+    <Content Include="App_Themes\Login\img\emergencias.gif" />
+    <Content Include="App_Themes\Login\img\emergencias_small.gif" />
+    <Content Include="App_Themes\Login\img\empad.gif" />
+    <Content Include="App_Themes\Login\img\empadronamiento.gif" />
+    <Content Include="App_Themes\Login\img\empadronamiento_small.gif" />
+    <Content Include="App_Themes\Login\img\empad_small.gif" />
+    <Content Include="App_Themes\Login\img\family.gif" />
+    <Content Include="App_Themes\Login\img\family_small.gif" />
+    <Content Include="App_Themes\Login\img\guardia.gif" />
+    <Content Include="App_Themes\Login\img\guardia_small.gif" />
+    <Content Include="App_Themes\Login\img\hidatidosis.gif" />
+    <Content Include="App_Themes\Login\img\hidatidosis_small.gif" />
+    <Content Include="App_Themes\Login\img\informes.gif" />
+    <Content Include="App_Themes\Login\img\informes_small.gif" />
+    <Content Include="App_Themes\Login\img\insum.gif" />
+    <Content Include="App_Themes\Login\img\insumosWeb.gif" />
+    <Content Include="App_Themes\Login\img\insumosWeb_small.gif" />
+    <Content Include="App_Themes\Login\img\insum_small.gif" />
+    <Content Include="App_Themes\Login\img\interconsultas.gif" />
+    <Content Include="App_Themes\Login\img\interconsultas_small.gif" />
+    <Content Include="App_Themes\Login\img\lab.gif" />
+    <Content Include="App_Themes\Login\img\lab_small.gif" />
+    <Content Include="App_Themes\Login\img\paciente.gif" />
+    <Content Include="App_Themes\Login\img\paciente_small.gif" />
+    <Content Include="App_Themes\Login\img\pcconsultas.gif" />
+    <Content Include="App_Themes\Login\img\pcmenor.gif" />
+    <Content Include="App_Themes\Login\img\pcontrol.gif" />
+    <Content Include="App_Themes\Login\img\pcontrol_small.gif" />
+    <Content Include="App_Themes\Login\img\pcperinatal.gif" />
+    <Content Include="App_Themes\Login\img\recupero.gif" />
+    <Content Include="App_Themes\Login\img\recuperobis.gif" />
+    <Content Include="App_Themes\Login\img\recuperobis_small.gif" />
+    <Content Include="App_Themes\Login\img\recupero_small.gif" />
+    <Content Include="App_Themes\Login\img\registroconsulta.gif" />
+    <Content Include="App_Themes\Login\img\registroconsulta_small.gif" />
+    <Content Include="App_Themes\Login\img\registromamas.gif" />
+    <Content Include="App_Themes\Login\img\registromamas_small.gif" />
+    <Content Include="App_Themes\Login\img\remediar.gif" />
+    <Content Include="App_Themes\Login\img\remediar_small.gif" />
+    <Content Include="App_Themes\Login\img\reportesInsumos.gif" />
+    <Content Include="App_Themes\Login\img\reportesInsumos_small.gif" />
+    <Content Include="App_Themes\Login\img\RGCV.gif" />
+    <Content Include="App_Themes\Login\img\RGCV_small.gif" />
+    <Content Include="App_Themes\Login\img\turnos %282%29.gif" />
+    <Content Include="App_Themes\Login\img\turnos.gif" />
+    <Content Include="App_Themes\Login\img\turnos1.gif" />
+    <Content Include="App_Themes\Login\img\turnos1_small.gif" />
+    <Content Include="App_Themes\Login\img\turnos_small %282%29.gif" />
+    <Content Include="App_Themes\Login\img\turnos_small.gif" />
+    <Content Include="App_Themes\Menu\balloons.css" />
+    <Content Include="App_Themes\Menu\fisheye-menu.css" />
+    <Content Include="App_Themes\Menu\fisheye.js" />
+    <Content Include="App_Themes\Menu\images\icon.gif" />
+    <Content Include="App_Themes\Menu\images\icon2.gif" />
+    <Content Include="App_Themes\Menu\images\icon2_small.gif" />
+    <Content Include="App_Themes\Menu\images\icon_small.gif" />
+    <Content Include="App_Themes\Menu\style.css" />
+    <Content Include="App_Themes\NuevaMaster\default.css" />
+    <Content Include="App_Themes\NuevaMaster\images\a1.gif" />
+    <Content Include="App_Themes\NuevaMaster\images\a2.gif" />
+    <Content Include="App_Themes\NuevaMaster\images\a3.gif" />
+    <Content Include="App_Themes\NuevaMaster\images\a4.gif" />
+    <Content Include="App_Themes\NuevaMaster\images\bbg0.gif" />
+    <Content Include="App_Themes\NuevaMaster\images\bbg1.gif" />
+    <Content Include="App_Themes\NuevaMaster\images\InternetExplorer.jpg" />
+    <Content Include="App_Themes\NuevaMaster\images\LogoSubse.jpg" />
+    <Content Include="App_Themes\NuevaMaster\images\pic.jpg" />
+    <Content Include="App_Themes\NuevaMaster\images\PlanNacer.jpg" />
+    <Content Include="App_Themes\NuevaMaster\images\RemediarMasRedes.jpg" />
+    <Content Include="App_Themes\NuevaMaster\images\Resolucion.jpg" />
+    <Content Include="App_Themes\NuevaMaster\images\x1.gif" />
+    <Content Include="App_Themes\NuevaMaster\images\x2.gif" />
+    <Content Include="App_Themes\Paciente\images\flecha1.jpg" />
+    <Content Include="App_Themes\PNacer\images\ayuda.png" />
+    <Content Include="App_Themes\PNacer\images\body_bg.jpg" />
+    <Content Include="App_Themes\PNacer\images\boton-buscar.gif" />
+    <Content Include="App_Themes\PNacer\images\boton_buscar.png" />
+    <Content Include="App_Themes\PNacer\images\boton_buscar1.gif" />
+    <Content Include="App_Themes\PNacer\images\boton_exp.png" />
+    <Content Include="App_Themes\PNacer\images\btn_buscar.gif" />
+    <Content Include="App_Themes\PNacer\images\header_home.jpg" />
+    <Content Include="App_Themes\PNacer\images\help.png" />
+    <Content Include="App_Themes\PNacer\images\home.png" />
+    <Content Include="App_Themes\PNacer\images\inicio.png" />
+    <Content Include="App_Themes\PNacer\images\logo.png" />
+    <Content Include="App_Themes\PNacer\images\logout.png" />
+    <Content Include="App_Themes\PNacer\images\logout2.png" />
+    <Content Include="App_Themes\PNacer\images\logo_nacer.jpg" />
+    <Content Include="App_Themes\PNacer\images\salir.png" />
+    <Content Include="App_Themes\PNacer\images\sub.png" />
+    <Content Include="App_Themes\PNacer\images\sub1.png" />
+    <Content Include="App_Themes\PNacer\jquery-ui-1.8rc3.custom.css" />
+    <Content Include="App_Themes\PNacer\style.css" />
+    <Content Include="App_Themes\Remediar\estiloAcordionRem.css" />
+    <Content Include="App_Themes\Remediar\imagesInstructivo\altapac.png" />
+    <Content Include="App_Themes\Remediar\imagesInstructivo\empadron11.png" />
+    <Content Include="App_Themes\Remediar\imagesInstructivo\inicio1.png" />
+    <Content Include="App_Themes\Remediar\imagesInstructivo\login1.png" />
+    <Content Include="App_Themes\Remediar\imagesInstructivo\pacenrem.png" />
+    <Content Include="App_Themes\Remediar\imagesInstructivo\pacensys.png" />
+    <Content Include="App_Themes\Remediar\imagesInstructivo\pacnoingr.png" />
+    <Content Include="App_Themes\Remediar\imagesInstructivo\pacver.png" />
+    <Content Include="App_Themes\Remediar\imagesInstructivo\remfin.png" />
+    <Content Include="App_Themes\Remediar\imagesInstructivo\remsum.png" />
+    <Content Include="App_Themes\Remediar\images\ayuda.png" />
+    <Content Include="App_Themes\Remediar\images\body_bg.jpg" />
+    <Content Include="App_Themes\Remediar\images\boton-buscar.gif" />
+    <Content Include="App_Themes\Remediar\images\boton_buscar.png" />
+    <Content Include="App_Themes\Remediar\images\boton_buscar1.gif" />
+    <Content Include="App_Themes\Remediar\images\boton_exp.png" />
+    <Content Include="App_Themes\Remediar\images\btn_buscar.gif" />
+    <Content Include="App_Themes\Remediar\images\header_home.jpg" />
+    <Content Include="App_Themes\Remediar\images\help.png" />
+    <Content Include="App_Themes\Remediar\images\home.png" />
+    <Content Include="App_Themes\Remediar\images\inicio.png" />
+    <Content Include="App_Themes\Remediar\images\logo.png" />
+    <Content Include="App_Themes\Remediar\images\logout.png" />
+    <Content Include="App_Themes\Remediar\images\logout2.png" />
+    <Content Include="App_Themes\Remediar\images\salir.png" />
+    <Content Include="App_Themes\Remediar\images\sub.png" />
+    <Content Include="App_Themes\Remediar\images\sub1.png" />
+    <Content Include="App_Themes\Remediar\jquery-ui-1.8rc3.custom.css" />
+    <Content Include="App_Themes\Remediar\style.css" />
+    <Content Include="App_Themes\RIS\images\calend1.jpg" />
+    <Content Include="App_Themes\RIS\images\campoFaltante.png" />
+    <Content Include="App_Themes\RIS\images\delete.png" />
+    <Content Include="App_Themes\RIS\images\detalleEstudio.png" />
+    <Content Include="App_Themes\RIS\images\recargarPagina.png" />
+    <Content Include="App_Themes\RIS\images\seleccionar.png" />
+    <Content Include="App_Themes\RIS\images\subirArchivoAdjunto.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\agregarPaciente.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\altaRegistro.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\buscar.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\calendario.jpg" />
+    <Content Include="App_Themes\turnosProtegidos\images\cerrar.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\consultaRegistro.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\continuar.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\delete.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\enviar.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\guardar.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\OLD_agregarInterconsulta.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\paciente.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\recargarPagina.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\reporte.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\seleccionar.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\subirArchivoAdjunto.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\verAgendas.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\verDatos.png" />
+    <Content Include="App_Themes\turnosProtegidos\images\volver.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\alert.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\cargando.gif" />
+    <Content Include="Images\config.png" />
+    <Content Include="Images\Desktop.png" />
+    <Content Include="Images\detalleEstudio.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\error.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\home.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\menuseparator.png" />
+    <Content Include="Images\ok.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\shut-down.png" />
+    <Content Include="Images\spacer.gif" />
+    <Content Include="js\basic.js" />
+    <Content Include="js\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="js\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="js\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="js\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="js\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="js\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="js\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="js\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="js\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="js\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="js\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="js\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="js\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="js\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="js\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="js\jquery-1.5.1.min.js" />
+    <Content Include="js\jquery-ui-1.8.9.custom.min.js" />
+    <Content Include="js\jquery.dataTables.min.js" />
+    <Content Include="js\json2.js" />
+    <Content Include="PacienteCargado.aspx" />
+    <Content Include="PacienteList.aspx" />
+    <Content Include="ProsameEdit.aspx" />
+    <Content Include="Services\ObraSocial.aspx" />
+    <Content Include="style.css" />
+    <Content Include="style.responsive.css" />
+    <Content Include="UserControl\DiagnosticoPrincipal.ascx" />
+    <Content Include="UserControl\ObrasSociales.ascx" />
+    <Content Include="App_Themes\apr\ControlMenor.skin" />
+    <Content Include="App_Themes\Clasificacion\images.rar" />
+    <Content Include="App_Themes\Clasificacion\images\boton.xcf" />
+    <Content Include="App_Themes\consultorio\Agenda\go.php" />
+    <Content Include="App_Themes\consultorio\Agenda\Scrap_Icons_ICO_Updated.zip" />
+    <Content Include="App_Themes\PNacer\images\boton.xcf" />
+    <Content Include="App_Themes\Remediar\images\boton.xcf" />
+    <None Include="js\jquery-1.3.1-vsdoc.js" />
+    <Content Include="js\jquery-1.3.1.min.js" />
+    <Content Include="js\jquery-1.3.2.min.js" />
+    <Content Include="js\jquery-ui-1.7.1.custom.css" />
+    <Content Include="js\jquery-ui.css" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.simplemodal-1.3.min.js" />
+    <Content Include="js\jquery.simplemodal.js" />
+    <Content Include="js\jquery.ui.datepicker-es.js" />
+    <Content Include="js\Mascara.js" />
+    <Content Include="js\moverfilas\abajo.gif" />
+    <Content Include="js\moverfilas\arriba.gif" />
+    <Content Include="js\moverfilas\codigo.js" />
+    <Content Include="js\moverfilas\eliminar.GIF" />
+    <Content Include="js\moverfilas\moverfilas.css" />
+    <Content Include="js\script.js" />
+    <Content Include="js\script.responsive.js" />
+    <Content Include="js\scriptAcordion.js" />
+    <Content Include="js\ui.datepicker-es.js" />
+    <Content Include="js\ValidaFecha.js" />
+    <Content Include="packages.config" />
+    <Content Include="MInterconsultas.Master" />
+    <None Include="Properties\PublishProfiles\Prosame.pubxml" />
+    <None Include="Properties\PublishProfiles\RIS_Publico.pubxml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MInterconsultas.Master.cs">
+      <DependentUpon>MInterconsultas.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MInterconsultas.Master.designer.cs">
+      <DependentUpon>MInterconsultas.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteCargado.aspx.cs">
+      <DependentUpon>PacienteCargado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PacienteCargado.aspx.designer.cs">
+      <DependentUpon>PacienteCargado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PacienteList.aspx.cs">
+      <DependentUpon>PacienteList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PacienteList.aspx.designer.cs">
+      <DependentUpon>PacienteList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProsameEdit.aspx.cs">
+      <DependentUpon>ProsameEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProsameEdit.aspx.designer.cs">
+      <DependentUpon>ProsameEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ObraSocial.aspx.cs">
+      <DependentUpon>ObraSocial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\ObraSocial.aspx.designer.cs">
+      <DependentUpon>ObraSocial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DiagnosticoPrincipal.ascx.cs">
+      <DependentUpon>DiagnosticoPrincipal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DiagnosticoPrincipal.ascx.designer.cs">
+      <DependentUpon>DiagnosticoPrincipal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ObrasSociales.ascx.cs">
+      <DependentUpon>ObrasSociales.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ObrasSociales.ascx.designer.cs">
+      <DependentUpon>ObrasSociales.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\css\.svn\prop-base\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\css\.svn\props\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\css\.svn\text-base\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\css\.svn\tmp\prop-base\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\css\.svn\tmp\props\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\css\.svn\tmp\text-base\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\images\.svn\prop-base\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\images\.svn\props\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\images\.svn\text-base\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\images\.svn\tmp\prop-base\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\images\.svn\tmp\props\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\images\.svn\tmp\text-base\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\img\.svn\prop-base\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\img\.svn\props\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\img\.svn\text-base\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\img\.svn\tmp\prop-base\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\img\.svn\tmp\props\" />
+    <Folder Include="App_Themes\Hidatidosis\Login\img\.svn\tmp\text-base\" />
+    <Folder Include="App_Themes\Laboratorio\Login\images\css\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CRREPORTSOURCEBRIDGELib">
+      <Guid>{80F19574-9245-4DFA-A0A6-8A21874282D3}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsCommonObjectModelLib">
+      <Guid>{FDB9B69E-BA79-4B13-9E96-8373AF162AEA}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsCubeDefModelLib">
+      <Guid>{44AD71D4-4905-491D-B179-B5D91EB57374}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CrystalReportsDataDefModelLib">
+      <Guid>{9B2F3E7B-8D45-47E8-95D3-3A9C1B22437F}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="fastJSON\fastJSON.csproj">
+      <Project>{207e91b1-c9f8-4913-88e1-3549ef5f3273}</Project>
+      <Name>fastJSON</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16003</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/RIS_Publico</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://www.desarrollo.saludnqn.gob.ar/prosane/</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

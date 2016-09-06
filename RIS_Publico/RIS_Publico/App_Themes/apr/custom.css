@@ -1,0 +1,184 @@
+﻿/* Cuerpo de la página */
+.centro 
+{
+    max-width:960px;
+    margin: 0 auto;
+}
+
+.centroGrande 
+{
+    max-width:1000px;
+    margin: 0 auto;
+}
+
+/* Encabezado de las paginas */
+#encabezado > *
+{
+    vertical-align:middle;
+}
+
+#encabezado h4
+{
+    margin-top:1px;
+}
+
+#encabezado table
+{
+    width:100%;
+}
+/* Footer de las paginas */
+#footer
+{
+    position:relative;
+    bottom:0px;
+    font-size:.9em;
+}
+#footer table
+{
+    width:100%;
+}
+
+/* Alto "dinámico" en las grillas */
+.dataTables_wrapper 
+{
+    min-height: 0 !important;
+}
+
+/* Sin márgenes en la tabla de las grillas */
+.dataTables_wrapper table
+{
+    margin-bottom: 0;
+}
+
+/* Alto fijo de los input-text */
+input[type=text] 
+{
+    height : 24px;
+    line-height:24px;
+}
+
+/* Cortar textos largos en selectmenús (plugin jqueryui) */
+.ui-selectmenu-status
+{
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 23px;
+}
+
+/* Sobreescribe el padding para los botones */
+.content button 
+{
+    padding: 0;
+}
+
+/* Algo de layouting para formularios (con tablas, "a'la Lucas") */
+table.formulario
+{
+    width:100%;
+}
+table.formulario td
+{
+    padding: 0px;
+}
+
+.dataTables_length > *
+{
+    vertical-align:middle;
+}
+
+.dataTables_length
+{
+    padding-top:1px;
+}
+
+button.ui-datepicker-trigger
+{
+    top:1px;
+}
+
+table.formulario label
+{
+    display:block; /*Rompe los radiobutton, el label sale abajo */
+}
+
+table.formulario .rbList label
+{
+    display:inline;
+}
+
+table.formulario tr td br
+{
+    display:none;
+}
+
+.content legend
+{
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.content table
+{
+    margin-bottom:0;
+}
+
+.content textarea{
+    width:100%;
+}
+
+.content input[type=text].fixedWidth
+{
+    width:242px;
+}
+
+.content select.fixedWidth{
+    width:250px;
+}
+
+/* Vertical Tabs
+----------------------------------*/
+.ui-tabs-vertical { width: 69em; }
+.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; min-height:25em;}
+.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .3em 0; }
+.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-selected { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; margin: 0 -1px .3em 0; }
+.ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 54em;}
+.ui-tabs-vertical .ui-widget-header 
+{
+    background-repeat: repeat-x;
+    background-position: 50% 0%;
+}
+
+.content table tr td ul {margin-bottom:0}
+
+
+/* AutoCompleters */
+
+table.autoCompleter td{
+    padding:0 5px 0 0;
+}
+
+#acResult br{
+    display:block;
+}
+
+.acResult{
+    clear:both;
+    width:100%;
+}
+
+/* Tooltips */
+.tooltip {
+	background-color:#000;
+	border:1px solid #fff;
+	padding:10px 15px;
+	width:200px;
+	display:none;
+	color:#fff;
+	text-align:left;
+	font-size:12px;
+
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 10px #000;
+	-webkit-box-shadow:0 0 10px #000;
+}

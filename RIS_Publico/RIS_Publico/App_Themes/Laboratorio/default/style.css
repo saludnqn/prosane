@@ -1,0 +1,623 @@
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+h3
+{
+	color: #333333;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0px 0 2px 0;
+	margin: 0px;
+	clear: both;
+	border-bottom: 1px dotted #BF8153;
+}
+
+#menu
+{
+	width: 100%;
+	float: left;
+	margin: 0; /*padding-top: 10px;*/
+	padding-top: 0px;
+	padding-left: 0px;
+	background-color: #008080;
+	height: 20px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+
+
+#cargando
+{
+	width: 100px;
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: #666666;
+}
+
+/*
+/*===================================================================
+		Definición de estilos para los controles web
+=================================================================== */
+.myLink
+{
+	/*border: 1px solid #ABCDEF;*/
+	text-align: left; /*	font-weight: bold;*/
+	font-size: 10pt;
+	font-family: Calibri; /*background-color: #FFFFFF;*/
+	color: #008080;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.myLabelIzquierda
+{
+	color: #333333;
+	font-size: 12px;
+	font-family: Verdana;
+	text-align: left;
+}
+
+.myTituloGris
+{
+	color: #333333;
+	font-size: 13px;
+	font-family: Verdana;
+	text-align: left;
+	font-weight: bold;
+}
+.myLabelDerecha
+{
+	color: #333333;
+	font-size: 12px;
+	font-family: Verdana;
+	text-align: left;
+}
+.myLinkRojo
+{
+	/*border: 1px solid #ABCDEF;*/
+	text-align: left; /*	font-weight: bold;*/
+	font-size: 9pt;
+	font-family: Calibri; /*background-color: #FFFFFF;*/
+	color: #CC3300;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.myLink2
+{
+	/*border: 1px solid #ABCDEF;*/
+	text-align: left; /*	font-weight: bold;*/
+	font-size: 9pt;
+	font-family: arial; /*background-color: #FFFFFF;*/
+	color: #000000;
+	font-weight: bold;
+}
+
+/*
+.top_link
+{display:block; float:left; height:36px; line-height:27px; color:#ccc; text-decoration:none; font-size:11px; font-weight:bold; padding:0 0 0 12px; cursor:pointer;background: url('menu/blank.gif');}
+*/
+
+.myLittleLink
+{
+	/*border: 1px solid #ABCDEF;*/
+	text-align: center; /*	font-weight: bold;*/
+	font-size: 9pt;
+	font-family: Candara; /*background-color: #FFFFFF;*/
+	color: #666666;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+
+
+
+
+.myTextoArea
+{
+	border: 1px solid #808080; /*font-weight: bold;*/
+	font-size: 9pt;
+	font-family: arial;
+	font-weight: bold;
+	background-color: #FCFCFC;
+}
+
+.myTexto
+{
+	border: 1px solid #808080; /*font-weight: bold;*/
+	font-size: 9pt;
+	font-family: arial;
+	background-color: #FCFCFC;
+}
+
+.myTextoLargo
+{
+	border: 1px solid #808080; /*font-weight: bold;*/
+	font-size: 9pt;
+	font-family: arial;
+	background-color: #FCFCFC;
+	width: 350px;
+}
+
+
+.codigo
+{
+	border: 1px solid #808080; /*font-weight: bold;*/
+	font-size: 9pt;
+	font-family: Candara;
+	background-color: #FCFCFC;
+	width: 50px;
+	font-weight: bold;
+}
+
+.codigoConResultado
+{
+	border: 1px solid #808080; /*font-weight: bold;*/
+	font-size: 9pt;
+	font-family: Candara;
+	background-color: #FFFF00;
+	width: 50px;
+	font-weight: bold;
+}
+
+
+.descripcion
+{
+	/*font-weight: bold;*/
+	border-style: solid solid solid none;
+	border-width: 1px;
+	border-color: #808080;
+	font-size: 9pt;
+	font-family: Candara;
+	background-color: #FCFCFC;
+	width: 348px;
+	font-weight: bold;
+}
+
+.fila
+{
+	border: 1px none #808080; /*font-weight: bold;*/
+	font-size: 9pt;
+	font-family: Candara;
+	background-color: #FCFCFC;
+	width: 10px;
+}
+
+
+
+
+.muestra
+{
+	border: 1px none #808080; /*font-weight: bold;*/
+	font-size: 9pt;
+	font-family: arial;
+	background-color: #FCFCFC;
+	width: 80px;
+}
+
+.tituloCelda
+{
+	border: 1px none #808080; /*font-weight: bold;*/
+	font-size: 9pt;
+	font-family: Candara;
+	background-color: #3366CC;
+	color: #FFFFFF;
+	height: 10px;
+	text-align: center;
+}
+
+
+
+.boton
+{
+	border: 1px solid #C0C0C0;
+	text-align: center; /*	font-weight: bold;*/
+	font-size: 9pt;
+	font-family: Candara;
+	background-color: #333333;
+	color: #FFFFFF;
+	width: 20px;
+	margin-left: 0px;
+	font-weight: bold;
+	height: 16px;
+}
+.myButton
+{
+	border: 1px solid #333333;
+	text-align: center; /*	font-weight: bold;*/
+	font-size: 12pt;
+	font-family: Calibri;
+	background-color: #F7FBFB;
+	color: #000000;
+	width: 80px;
+	margin-left: 0px;
+	font-weight: bold;
+}
+
+.myButtonRojo
+{
+	border: 1px solid #808000;
+	text-align: center; /*	font-weight: bold;*/
+	font-size: 9pt;
+	font-family: arial;
+	background-color: #FFFFFF;
+	color: #FF0000;
+	width: 150px;
+	margin-left: 0px;
+	font-weight: bold;
+	height: 23px;
+}
+
+.myButtonGris
+{
+	border: 2px solid #84B6E8;
+	text-align: center; /*	font-weight: bold;*/
+	font-size: 8pt;
+	font-family: arial;
+	background-color: #EEEEEE;
+	color: #000000;
+	margin-left: 0px;
+	font-weight: normal;
+	width: 92px;
+}
+
+
+.myList
+{
+	border: 1px solid #808080;
+	font-size: 9pt;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FCFCFC;
+	color: #000000;
+}
+
+
+.myCuadro
+{
+	border: 1px solid #428DD9;
+	font-size: 8.6pt;
+	font-family: arial;
+	background-color: #FFFFFF;
+	color: #123456;
+	vertical-align: top;
+	width: 100%;
+}
+.myTabla
+{
+	border-style: none;
+	font-size: 8.6pt;
+	font-family: arial;
+	background-color: #FFFFFF;
+	color: #333333;
+	vertical-align: top;
+}
+
+
+.mytituloRelleno
+{
+	padding: 0px 10px 0px 10px;
+	border: thin solid #000000;
+	font-size: 14pt;
+	font-family: arial;
+	color: #FFFFFF;
+	vertical-align: top;
+	font-weight: bold;
+	text-transform: none;
+	text-align: center; /*	background-image: url(      'images/CUADRO.jpg' );*/
+	background-color: #990000;
+}
+
+
+.mytituloTabla
+{
+	border-style: none;
+	font-size: 11pt;
+	font-family: Calibri;
+	background-color: #FFFFFF;
+	color: #333333;
+	vertical-align: top;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.mytituloGris
+{
+	border: 1px none #CCCCCC;
+	font-size: 9pt;
+	font-family: Calibri;
+	color: #333333;
+	vertical-align: top;
+	font-weight: bold;
+	text-transform: none;
+	padding-left: 10px;
+}
+
+.mytituloRojo
+{
+	border: 1px none #CCCCCC;
+	font-size: 9pt;
+	font-family: arial;
+	color: #FF0000;
+	vertical-align: top;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+
+.myLabelIzquierda
+{
+	border-style: none;
+	font-size: 9pt;
+	font-family: Calibri;
+	background-color: #FFFFFF;
+	color: #333333;
+	font-weight: bold;
+}
+
+.myLabelIzquierdaGde
+{
+	border-style: none;
+	font-size: 10pt;
+	font-family: Calibri;
+	background-color: #FFFFFF;
+	color: #333333;
+	font-weight: bold;
+	text-transform: inherit;
+}
+
+.myLabelDerechaGde
+{
+	border-style: none;
+	font-size: 10pt;
+	font-family: Calibri;
+	background-color: #FFFFFF;
+	color: #333333;
+	text-transform: inherit;
+}
+
+
+.myLabel
+{
+	border-style: none;
+	font-size: 8pt;
+	font-family: Calibri;
+	background-color: #FFFFFF;
+	color: #333333;
+	font-weight: normal;
+	text-transform: inherit;
+	
+}
+
+
+
+
+
+.myLabelLitlle
+{
+	border-style: none;
+	font-size: 8pt;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	color: #666666;
+	font-weight: bold;
+	text-transform: inherit;
+}
+
+
+.myLabelAzul
+{
+	border-style: none;
+	font-size: 8pt;
+	font-family: arial;
+	background-color: #FFFFFF;
+	color: #003366;
+	font-weight: bold;
+	text-transform: inherit;
+	text-decoration: underline;
+}
+
+
+/** Estilos para los tabs **/
+ul.tabs
+{
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 22px;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	width: 100%;
+}
+ul.tabs li
+{
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 21px;
+	line-height: 21px;
+	border: 1px solid #999;
+	border-left: none;
+	margin-bottom: -1px;
+	overflow: hidden;
+	position: relative;
+	background: #DFE7F7;
+}
+ul.tabs li a
+{
+	text-decoration: none;
+	color: #000;
+	display: block;
+	font-size: 1em;
+	padding: 0 10px;
+	border: 1px solid #fff;
+	outline: none;
+}
+ul.tabs li a:hover
+{
+	background: #DFE7F7;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover
+{
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.tab_container
+{
+	border: 1px solid #999;
+	border-top: none;
+	overflow: hidden;
+	clear: both;
+	float: left;
+	width: 100%;
+	background: #fff;
+}
+.tab_content
+{
+	padding: 20px;
+	font-size: 1.2em;
+}
+/*****/
+
+/* Greyscale
+Table Design by Scott Boyle, Two Plus Four
+www.twoplusfour.co.uk
+----------------------------------------------- */
+
+.mytable1
+{
+	border: 1px solid #BFBFBF;
+	border-collapse: collapse;
+	color: #333333;
+	background: #FDFDFD;
+	font-size: 0.9em;
+	border-spacing: 0px;
+	position:relative;
+	display:block;
+}
+
+.mytable1 thead
+{
+	background-color: white;
+	vertical-align: middle;
+	display:block;
+}
+
+.mytable1 thead th
+{
+	padding:.5px .5px .5px 0px;
+}
+
+.mytable1 tbody
+{
+	display:block;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.mytable1 tbody tr
+{
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: #FFF;
+	font-family: Arial, Helvetica, sans-serif;
+	overflow:hidden;
+}
+
+.mytable1 tbody td
+{
+	color: #000000;
+	/*display: block;*/
+	padding-left:.5em;
+	padding-right:.5em;
+}
+
+.mytable2
+{
+	border: 1px solid #BFBFBF;
+	border-collapse: collapse;
+	color: #333333;
+	background: #FDFDFD;
+	font-size: 1em;
+	border-spacing: 0px;
+	font-family: 'Courier New' , Courier, monospace;
+	font-size: 12px;
+	margin-left: 25px;
+}
+
+
+
+
+
+hr.linea
+{
+	border: 1px dotted #ccc;
+	height: 1px;
+	background-color: #C0C0C0;
+	width: 100%;
+}
+
+.Grid
+{
+	border-style: 1px;
+	border-color: #3A93D2;
+	border-width: 1px;
+}
+
+
+.GridHeader
+{
+	color: white;
+	background-color: #008080;
+	font-weight: bold;
+	font-size: 13px;
+	font-family: Calibri;
+}
+
+.GridRow
+{
+	color: #000000;
+	background-color: #FFFFFF;
+	font-weight: normal;
+	font-size: 12px;
+	font-family: Calibri;
+}
+
+.GridAlternateRow
+{
+	color: #000000;
+	background-color: #F5F5F5;
+	font-weight: normal;
+	font-size: 12px;
+	font-family: Calibri;
+}
+
+.Grid2 tbody tr td
+{
+	padding-left: 2px;
+}
+
+/* =links
+----------------------------------------------- */
+
+
+
+/* =head =foot
+----------------------------------------------- */
+
+.pnlReferencias div
+{
+	font-family: Calibri;
+	font-size: 9pt;
+	padding-left: 5px;
+	float: left;
+}
